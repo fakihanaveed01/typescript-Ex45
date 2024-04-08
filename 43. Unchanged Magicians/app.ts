@@ -1,0 +1,23 @@
+
+let magicians: string[] = ["Alice", "David", "Chris"];
+
+function make_great(magicians: string[]): string[] {
+    let greatMagicians = []; // Changed variable name from Magicians to greatMagicians
+    magicians.forEach(magician => {
+        greatMagicians.push(`${magician} the Great`); // Corrected variable name here
+    });
+    return magicians; // Corrected return value to Magicians
+}
+
+function show_magicians(magicians: string[]) {
+    for (let i = 0; i < magicians.length; i++) {
+        console.log(magicians[i]);
+    }
+}
+
+let greatMagicians = make_great(magicians.slice()); // Creates a new modified array
+console.log("Original magicians:");
+show_magicians(magicians); // Shows original names
+console.log("Great magicians:");
+show_magicians(greatMagicians); // Shows modified names
+
